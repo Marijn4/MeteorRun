@@ -1,0 +1,5 @@
+body {
+    position: fixed; 
+    overflow-y: none;
+    overflow-x: none;
+}
