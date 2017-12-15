@@ -8,6 +8,7 @@
 
 .buttonstyle:hover {
 	color: #dcf2fd;
+	cursor: pointer;
 }
 
 body {
