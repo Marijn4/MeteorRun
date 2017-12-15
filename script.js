@@ -1,5 +1,6 @@
 var spaceCraftX = 130,
-	meteorX = spaceCraftX,
+	meteorX = spaceCraftX - 10,
+	meteorX1 = spaceCraftX + 10,
 	meteorY = 0,
 	onceAlert = true,
 	score = 0,
