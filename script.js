@@ -2,7 +2,9 @@ var spaceCraftX = 130,
 	meteorX = Math.random() * 260,
 	meteorY = 0,
 	onceAlert = true,
-	score = 0;
+	score = 0,
+	difficulty = 1000,
+	difficulty1 = 1;
 
 window.onload = function() {
 	setInterval( function() {
@@ -32,8 +34,13 @@ window.onload = function() {
 				meteorX = Math.random() * 260;
 				score += 1;
 				document.getElementById('score').innerHTML = 'SCORE: ' + score;
+				if (difficulty > 125) {
+					difficulty = difficulty / 2;
+					difficulty1 += 1;
+				document.getElementById('difficulty').innerHTML = 'DIFFICULTY: ' + difficulty1;
+				}
 			}
-		},1000)
+		},difficulty)
 	}
 },1000)
 	

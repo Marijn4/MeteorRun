@@ -5,18 +5,19 @@
 	border-width: 2px;
 	margin: 3px;
 	display: inline-block;
+	font-size: 30px;
 }
 
 #leftbut {
 	position: absolute;
-	left: 45%;
-	top: 75%;
+	left: 42.5%;
+	top: 80%;
 }
 
 #rightbut {
 	position: absolute;
-	left: 50%;
-	top: 75%;
+	left: 52.5%;
+	top: 80%;
 }
 
 .buttonstyle:hover {
@@ -46,5 +47,10 @@ body {
 
 #score {
 	font-size: 30px;
+	color: white;
+}
+
+#difficulty {
+	font-size: 20px;
 	color: white;
 }
