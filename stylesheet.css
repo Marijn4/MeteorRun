@@ -30,7 +30,7 @@
 	border: blue 2px solid;
 	width: 240px;
 	height: 400px;
-	margin: 50px;
+	margin: 30px;
 }
 
 #container {
@@ -42,4 +42,9 @@ body {
 	background: linear-gradient(to bottom right, #0c096f, #030729);
 	height: 100%;
 	background-attachment: fixed;
+}
+
+#score {
+	font-size: 30px;
+	color: white;
 }
