@@ -34,11 +34,15 @@ window.onload = function() {
 	
 }
 
+*/
+
 function control() {
 	if (meteorX + 30 =< spaceCraftX) {
-		
+
 	}
 }
+
+*/
 
 function moveLeft() {
 	spaceCraftX -= 10;
