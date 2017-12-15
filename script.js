@@ -1,5 +1,10 @@
-window.onload = function() {
-	var img1 = document.getElementById('img1');
-	var img2 = document.getElementById('img2');
-	drawImage();
-} 
+document.getElementById("leftbut").onclick = function() {moveLeft()};
+document.getElementById("rightbut").onclick = function() {moveRight()};
+	function moveLeft() {
+		alert("left");
+	};
+
+	function moveRight() {
+		alert("right");
+	};
+};
