@@ -1,6 +1,7 @@
 var spaceCraftX = 130,
 	meteorX = Math.random() * 260,
-	meteorY = 0;
+	meteorY = 0,
+	onceAlert = true;
 
 window.onload = function() {
 	setInterval( function() {
@@ -13,6 +14,7 @@ window.onload = function() {
 		ctx.drawImage(img2,130,130,30,12);
 		window.interval = setInterval( function() {
 			meteorY += 5;
+			control();
     		var c=document.getElementById("myCanvas");
     		var ctx=c.getContext("2d");
 			ctx.clearRect(0, 0, c.width, c.height);
@@ -34,20 +36,37 @@ window.onload = function() {
 	
 }
 
+function control() {
+	if (meteorX + 30 > spaceCraftX && meteorX - 30 < spaceCraftX && meteorY + 10 > 130) {
+		clearInterval(interval);
+		meteorY = 1;
+		meteorX = Math.random() * 260;
+		onceAlert = true
+		if (onceAlert) {
+		alert('GAME OVER')
+		onceAlert = false;
+		}
+	}
+}
+
 function moveLeft() {
-	spaceCraftX -= 10;
-    var c=document.getElementById("myCanvas");
-    var ctx=c.getContext("2d");
-	ctx.clearRect(0, 0, c.width, c.height);
-	ctx.drawImage(img1,meteorX,meteorY, 30, 10);
-	ctx.drawImage(img2,spaceCraftX,130,30,12);
+	if (spaceCraftX > 0) {
+		spaceCraftX -= 10;
+	    var c=document.getElementById("myCanvas");
+	    var ctx=c.getContext("2d");
+		ctx.clearRect(0, 0, c.width, c.height);
+		ctx.drawImage(img1,meteorX,meteorY, 30, 10);
+		ctx.drawImage(img2,spaceCraftX,130,30,12);
+	}
 };
 
 function moveRight() {
-	spaceCraftX += 10;
-    var c=document.getElementById("myCanvas");
-    var ctx=c.getContext("2d");
-	ctx.clearRect(0, 0, c.width, c.height);
-	ctx.drawImage(img1,meteorX,meteorY, 30, 10);
-	ctx.drawImage(img2,spaceCraftX,130,30,12);
+	if (spaceCraftX < 270) {
+		spaceCraftX += 10;
+	    var c=document.getElementById("myCanvas");
+	    var ctx=c.getContext("2d");
+		ctx.clearRect(0, 0, c.width, c.height);
+		ctx.drawImage(img1,meteorX,meteorY, 30, 10);
+		ctx.drawImage(img2,spaceCraftX,130,30,12);
+	}
 };
