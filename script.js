@@ -69,4 +69,10 @@ function moveRight() {
 		ctx.drawImage(img1,meteorX,meteorY, 30, 10);
 		ctx.drawImage(img2,spaceCraftX,130,30,12);
 	}
+	spaceCraftX += 10;
+    var c=document.getElementById("myCanvas");
+    var ctx=c.getContext("2d");
+	ctx.clearRect(0, 0, c.width, c.height);
+	ctx.drawImage(img1,meteorX,meteorY, 30, 10);
+	ctx.drawImage(img2,spaceCraftX,130,30,12);
 };
