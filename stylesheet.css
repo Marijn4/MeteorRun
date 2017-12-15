@@ -9,3 +9,11 @@
 .buttonstyle:hover {
 	color: #dcf2fd;
 }
+
+body {
+	background-color: #668cff;
+	background: linear-gradient(to bottom right, #668cff , #0c096f);
+	height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
