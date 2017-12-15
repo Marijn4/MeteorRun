@@ -12,12 +12,14 @@
 	position: absolute;
 	left: 42.5%;
 	top: 80%;
+	margin-top: 20px;
 }
 
 #rightbut {
 	position: absolute;
 	left: 52.5%;
 	top: 80%;
+	margin-top: 20px;
 }
 
 .buttonstyle:hover {
