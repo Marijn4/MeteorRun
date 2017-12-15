@@ -1,8 +1,11 @@
 var spaceCraftX = 130,
-	meteorX = Math.random() * 260,
+	meteorX = spaceCraftX - 10,
+	meteorX1 = spaceCraftX + 10,
 	meteorY = 0,
 	onceAlert = true,
-	score = 0;
+	score = 0,
+	difficulty = 2000,
+	difficulty1 = 1;
 
 window.onload = function() {
 	setInterval( function() {
@@ -29,11 +32,16 @@ window.onload = function() {
 				ctx.clearRect(0, 0, c.width, c.height);
 		 		ctx.drawImage(img1,meteorX,meteorY, 30, 10);
 				ctx.drawImage(img2,spaceCraftX,130,30,12);
-				meteorX = Math.random() * 260;
+				meteorX = spaceCraftX;
 				score += 1;
 				document.getElementById('score').innerHTML = 'SCORE: ' + score;
+				if (difficulty > 125) {
+					difficulty = difficulty / 2;
+					difficulty1 += 1;
+				document.getElementById('difficulty').innerHTML = 'DIFFICULTY: ' + difficulty1;
+				}
 			}
-		},1000)
+		},difficulty)
 	}
 },1000)
 	
@@ -43,8 +51,12 @@ function control() {
 	if (meteorX + 20 > spaceCraftX && meteorX - 20 < spaceCraftX && meteorY + 5 > 130) {
 		clearInterval(interval);
 		meteorY = 1;
-		meteorX = Math.random() * 260;
+		meteorX = spaceCraftX;
 		onceAlert = true
+		if (difficulty1 > 1) {
+			difficulty1 = difficulty1 - 1;
+			document.getElementById('difficulty').innerHTML = 'DIFFICULTY: ' + difficulty1;
+		}
 		if (onceAlert) {
 		score = score - 1;
 		document.getElementById('score').innerHTML = 'SCORE: ' + score;
