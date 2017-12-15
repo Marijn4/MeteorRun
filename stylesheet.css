@@ -58,9 +58,9 @@ body {
 }
 
 @keyframes scoreani {
-	0% {color: #8e5fa4;}
-	50% {color: #b9fff4;}
-	100% {color: #8e5fa4;}
+	0% {color: #8e5fa4; text-shadow: 2px 3px #4e5fa4;}
+	50% {color: #b9fff4;text-shadow: 2px 0px #4e5fa4;}
+	100% {color: #8e5fa4; text-shadow: 2px 3px #4e5fa4;}
 }
 
 #difficulty {
@@ -74,7 +74,7 @@ body {
 }
 
 @keyframes diffani {
-	0% {color: #b9fff4;}
-	50% {color: #8e5fa4;}
-	100% {color: #b9fff4;}
+	0% {color: #b9fff4; text-shadow: 2px 0px #4e5fa4;}
+	50% {color: #8e5fa4; text-shadow: 2px 3px #4e5fa4;}
+	100% {color: #b9fff4; text-shadow: 2px 0px #4e5fa4;}
 }
