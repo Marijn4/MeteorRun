@@ -63,5 +63,16 @@ body {
 
 #difficulty {
 	font-size: 20px;
-	color: white;
+	color: #8e5fa4;
+	text-shadow: 2px 2px #4e5fa4;
+	font-style: normal;
+	animation-name: diffani;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes diffani {
+	0% {color: #b9fff4;}
+	50% {color: #8e5fa4;}
+	100% {color: #b9fff4;}
 }
