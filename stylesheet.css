@@ -78,3 +78,31 @@ body {
 	50% {color: #8e5fa4; text-shadow: 2px 3px #4e5fa4;}
 	100% {color: #b9fff4; text-shadow: 2px 0px #4e5fa4;}
 }
+
+#info {
+	color: #96e7cf;
+	font-size: 25px;
+	position: fixed;
+	display: block;
+	animation-name: info;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes info {
+	0% {color: #96e7cf;}
+	50%{color:grey;}
+	100%{color: #96e7cf;}
+}
+
+
+#creditbox{
+	display: none;
+	position: fixed;
+	padding: 5px; 
+	margin-top: 30px;
+	color: black;
+	background-color: #96a7cf;
+	border-radius: 4px;
+	border: 4px #a097c4 solid;
+}

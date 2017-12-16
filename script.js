@@ -86,3 +86,11 @@ function moveRight() {
 		ctx.drawImage(img2,spaceCraftX,130,30,12);
 	}
 };
+
+window.onload = function() {
+	$(document).ready(function () {
+    	$("#info").click(function(){
+        	$("#creditbox").toggle(300);
+    	});
+	});
+}
