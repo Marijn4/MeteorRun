@@ -44,6 +44,11 @@ window.onload = function() {
 		},difficulty)
 	}
 },1000)
+$(document).ready(function () {
+   	$("#info").click(function(){
+       	$("#creditbox").toggle(200);
+   	});
+});
 	
 }
 
@@ -86,11 +91,3 @@ function moveRight() {
 		ctx.drawImage(img2,spaceCraftX,130,30,12);
 	}
 };
-
-window.onload = function() {
-	$(document).ready(function () {
-    	$("#info").click(function(){
-        	$("#creditbox").toggle(300);
-    	});
-	});
-}

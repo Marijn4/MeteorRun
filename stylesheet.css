@@ -88,7 +88,10 @@ body {
 	animation-duration: 2s;
 	animation-iteration-count: infinite;
 }
+#info:hover {
+	cursor: pointer;
 
+}
 @keyframes info {
 	0% {color: #96e7cf;}
 	50%{color:grey;}
@@ -105,4 +108,5 @@ body {
 	background-color: #96a7cf;
 	border-radius: 4px;
 	border: 4px #a097c4 solid;
+	cursor: default;
 }
